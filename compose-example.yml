@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  flask:
+    image: cdunkelb/flask-boilerplate:v1.0.1
+    ports:
+      - "8000:5000"
+    secrets:
+     - credentials
+    environment:
+      SERVER: "example.com"
+
+secrets:
+  credentials:
+    file: ./credentials.txt
